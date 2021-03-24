@@ -40,13 +40,13 @@ double Argument(complex c)
 	double result;
 
 	if (c.re > 0)
-		result = atan(c.im/c.re);
+		result = atan(c.im / c.re);
 	else if (c.im > 0)
-		result = (PI/2) - atan(c.re/c.im);
+		result = (PI / 2) - atan(c.re / c.im);
 	else if  (c.im < 0)
-		result = -(PI/2) - atan(c.re/c.im);
+		result = -(PI / 2) - atan(c.re / c.im);
 	else if (c.re < 0)
-		result = atan(c.im/c.re) + PI;
+		result = atan(c.im / c.re) + PI;
 	else
 		return (0);
 
@@ -109,7 +109,7 @@ void Division(complex c1, complex c2, complex *c3)
 }
 
 /* Task9 */
-void ComplexFromModArg (double m, double arg, complex *c3)
+void ComplexFromModArg(double m, double arg, complex *c3)
 {
 	double real, imaginary;
 
@@ -160,23 +160,23 @@ int main(void)
 	ComplexNumber(c2);
 
 	printf("Addition: ");
-	Addition(c1,c2,&c3);
+	Addition(c1, c2, &c3);
 	ComplexNumber(c3);
 
 	printf("Subtraction: ");
-	Subtraction(c1,c2,&c3);
+	Subtraction(c1, c2, &c3);
 	ComplexNumber(c3);
 
 	printf("Multiplication: ");
-	Multiplication(c1,c2,&c3);
+	Multiplication(c1, c2, &c3);
 	ComplexNumber(c3);
 
 	printf("Division: ");
-	Division(c1,c2,&c3);
+	Division(c1, c2, &c3);
 	ComplexNumber(c3);
 
 	printf("From Mod and Arg: ");
-	ComplexFromModArg(6,7,&c3);
+	ComplexFromModArg(6, 7, &c3);
 	ComplexNumber(c3);
 
 	return (0);
